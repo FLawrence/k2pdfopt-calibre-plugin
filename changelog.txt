@@ -1,0 +1,35 @@
+[B]Version 0.5.5[/B] - 1 February 2025
+Fix: bug in remove_arg
+
+[B]Version 0.5.4[/B] - 5 April 2024
+Fix: https://www.mobileread.com/forums/showpost.php?p=4421160&postcount=16
+
+[B]Version 0.5.2[/B] - 17 February 2024
+Fix: Progress not showing properly when using the -p option because the line printed to stdout is different.
+
+[B]Version 0.5.0[/B] - 17 February 2024
+Update: Persist last used settings.
+Fix: Pass -gui- switch to prevent k2pdfopt from popping on Windows.
+
+[B]Version 0.4.0[/B] - 16 February 2024
+Misc fixes.
+
+[B]Version 0.3.0[/B] - 14 February 2024
+Jobs overhaul. Shift to all threaded jobs. Jobs can now be aborted mid-conversion and show progress properly.
+Page count by querying k2pdfopt without having to use any third party utils.
+Stand alone version: Double progress bar to show overall progress as well as each book progress.
+
+[B]Version 0.2.1[/B] - 8 February 2024
+Misc fixes.
+
+[B]Version 0.2.0[/B] - 4 February 2024
+Update: enable adding converted file to the same book record while backing up the original PDF file to ORIGINAL_PDF.
+
+[B]Version 0.1.2[/B] - 3 February 2024
+Update: Modifications to preview.
+
+[B]Version 0.1.1[/B] - 2 February 2024
+Update: Preview: Remove timeout and make preview button toggle into a cancel button instead.
+
+[B]Version 0.1.0[/B] - 26 January 2024
+Initial Release.
