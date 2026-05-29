@@ -582,25 +582,25 @@ class MainDialog(Dialog):
 
     def _mode_changed(self, current_text):
         mode = {v:k for k,v in cfg.MODE_MAP.items()}.get(current_text, '')
-        native = mode not in ['copy','def','crop']
+        native = mode not in ['copy','def','def_k2','crop','crop_k2']
         if not native:
             self.native_chk.setChecked(native)
         self.native_chk.setEnabled(native)
-        wrapped = mode not in ['copy','fp','fw','2col','crop']
+        wrapped = mode not in ['copy','fp','fw','2col','crop_k2']
         if not wrapped:
             self.reflow_chk.setChecked(wrapped)
         self.reflow_chk.setEnabled(wrapped)
-        color = mode not in ['def','crop']
+        color = mode not in ['def_k2','crop_k2']
         if not color:
             self.color_chk.setChecked(color)
         self.color_chk.setEnabled(color)
-        landscape = mode not in ['def','crop']
+        landscape = mode not in ['def', 'def_k2','crop','crop_k2']
         if not landscape:
             self.landscape_chk.setChecked(landscape)
         self.landscape_chk.setEnabled(landscape)
-        if mode and not (mode in ['def','2col']):
+        if mode and not (mode in ['def', 'def_k2','2col']):
             self.max_cols_spin.setValue(1)
-        if mode in ['def','2col']:
+        if mode in ['def','def_k2','2col']:
             self.max_cols_spin.setValue(2)
         if mode:
             s = copy.deepcopy(self.save_settings()['k2pdfopt'])
@@ -715,7 +715,11 @@ class MainDialog(Dialog):
         self.pages_ledit.setText(s['pages'])
         self.cmdopts_ledit.setText(s['cmdopts'])
         conversion_mode = s['conversion_mode']
-        self.conversion_mode_combo.setCurrentText(cfg.MODE_MAP[conversion_mode])
+        if conversion_mode in cfg.MODE_MAP.keys():
+            self.conversion_mode_combo.setCurrentText(cfg.MODE_MAP[conversion_mode])
+        else:
+            self.conversion_mode_combo.setCurrentText(conversion_mode)
+
         self.font_size_spin.setValue(s['fixed_font_size'])
         #self.cover_image_spin.setValue(s['cover_image'])
 

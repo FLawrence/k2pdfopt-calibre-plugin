@@ -116,6 +116,7 @@ DEVICE_NAME_MAP = {
     'koc': 'Kobo Clara HD',
     'kof': 'Kobo Forma',
     'kol': 'Kobo Libra H2O',
+    'kolc': 'Kobo Libre Colour',
     'nex7': 'Nexus 7',
     None: 'Other (specify width & height)'
 }
@@ -143,6 +144,7 @@ DEVICE_WIDTH_MAP = {
     'koc': 1072,
     'kof': 1440,
     'kol': 1264,
+    'kolc': 1264,
     'nex7': 1187
 }
 
@@ -169,6 +171,7 @@ DEVICE_HEIGHT_MAP = {
     'koc': 1317,
     'kof': 1745,
     'kol': 1527,
+    'kolc': 1680,
     'nex7': 1811
 }
 
@@ -195,25 +198,28 @@ DEVICE_DPI_MAP = {
     'koc': 300,
     'kof': 300,
     'kol': 300,
+    'kolc': 300,
     'nex7': 323
 }
 
 MODE_MAP = {
-    'def': 'Default',
+    'def': 'Default (Kobo Libre Colour)',
+    'def_k2': 'Default (Kindle 1-5)',
     'copy': 'Copy',
     'fp': 'Fit Page',
     'fw': 'Fit Width',
     '2col': '2 Columns',
     'tm': 'Trim Margins',
-    'crop': 'Crop',
+    'crop': 'Crop (Kobo Libre Colour)',
+    'crop_k2': 'Crop (Kindle 1-5)',
     'concat': 'Concat',
 }
 
 CONVERSION_DEFAULTS = {
-    'device': 'k2',
-    'width': [560, 'p'],
-    'height': [735, 'p'],
-    'dpi': 167,
+    'device': 'kolc',
+    'width': [1264, 'p'],
+    'height': [1680, 'p'],
+    'dpi': 300,
     'margins': [0.0,0.0,0.0,0.0],
     'max_cols': 2,
     'drf': 0.0,
@@ -225,7 +231,7 @@ CONVERSION_DEFAULTS = {
     'fastpreview': True,
     'autostraighten': False,
     'break_after': False,
-    'color': False,
+    'color': True,
     'landscape': False,
     'native': False,
     'rtl': False,
@@ -266,6 +272,18 @@ OPT_NAME_MAP = {
 
 MODE_SETTINGS_MAP = {
     'def': {
+        'device': 'kolc',
+        'width': [1264, 'p'],
+        'height': [1680, 'p'],
+        'dpi': 300,
+        'margins': [0.0,0.0,0.0,0.0],
+        'max_cols': 2,
+        'color': True,
+        'landscape': False,
+        'native': False,
+        'reflow': True
+    },
+    'def_k2': {
         'device': 'k2',
         'width': [560, 'p'],
         'height': [735, 'p'],
@@ -316,6 +334,18 @@ MODE_SETTINGS_MAP = {
         'reflow': False
     },
     'crop': {
+        'device': 'kolc',
+        'width': [1264, 'p'],
+        'height': [1680, 'p'],
+        'dpi': 300,
+        'margins': [0.0,0.0,0.0,0.0],
+        'max_cols': 1,
+        'color': True,
+        'landscape': False,
+        'native': False,
+        'reflow': True
+    },    
+    'crop_k2': {
         'device': 'k2',
         'width': [560, 'p'],
         'height': [735, 'p'],

@@ -1,3 +1,9 @@
+[B]Version 0.5.5.1[/B] - 29 May 2026
+Update: Added Kobo Libre Colour into device list and made it the default. Previous conversion default set
+to 'Default (Kindle 1 - 5)' and new default 'Default (Kobo Libre Colour)' added. Also conversion 'Crop' 
+now 'Crop (Kindle 1 - 5)' and 'Crop(Kobo Libre Colour)' added which allows colour and reflow.
+Fix: Bug causing plugin to crash on start with a indexing error if the conversion mode was left on blank
+
 [B]Version 0.5.5[/B] - 1 February 2025
 Fix: bug in remove_arg
 

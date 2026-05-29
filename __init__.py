@@ -24,8 +24,8 @@ class K2pdfoptBase(InterfaceActionBase):
     name                    = 'K2pdfopt Plugin'
     description             = 'Optimizes PDFs for viewing on small screens like ereaders'
     supported_platforms     = ['windows', 'osx', 'linux'] # Platforms this plugin will run on
-    author                  = 'Ahmed Zaki'
-    version                 = (0, 5, 5)
+    author                  = 'Ahmed Zaki with tweaks by F Lawrence'
+    version                 = (0, 5, 5, 1)
     minimum_calibre_version = (3, 0, 0)
 
     #: This field defines the GUI plugin class that contains all the code
